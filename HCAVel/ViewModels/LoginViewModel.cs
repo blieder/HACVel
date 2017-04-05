@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using HCAVelModels;
 
 namespace HCAVel.ViewModels 
 {
@@ -34,6 +35,27 @@ namespace HCAVel.ViewModels
                 SetProperty(ref _password, value);
             }
         }
+
+        private string _selectedServer;
+        public string SelectedServer
+        {
+            get { return _selectedServer.ServerName; }
+            set
+            {
+                SetProperty(ref _selectedServer, value);
+            }
+
+        }
+
+        public List<HCAVelModels.HACVelServer> Servers
+        {
+            get
+            {
+                List<HCAVelModels.HACVelServer> returnValue = new HCAVelModels.HACVelServer().GetServers();
+                return returnValue;
+            }
+        }
+
         #endregion
 
         #region --- Commands ---

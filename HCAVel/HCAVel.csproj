@@ -146,6 +146,12 @@
   <ItemGroup>
     <Resource Include="Resources\NUCORMill.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HCAVelModels\HCAVelModels.csproj">
+      <Project>{a0138920-8e1a-4da2-aec9-b0d89ffb3289}</Project>
+      <Name>HCAVelModels</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
