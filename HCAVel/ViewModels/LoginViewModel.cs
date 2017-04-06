@@ -39,7 +39,7 @@ namespace HCAVel.ViewModels
         private string _selectedServer;
         public string SelectedServer
         {
-            get { return _selectedServer.ServerName; }
+            get { return _selectedServer; }
             set
             {
                 SetProperty(ref _selectedServer, value);
@@ -63,7 +63,8 @@ namespace HCAVel.ViewModels
         {
             bool returnValue = 
                 !string.IsNullOrWhiteSpace(_password) 
-                && !string.IsNullOrWhiteSpace(_userName);
+                && !string.IsNullOrWhiteSpace(_userName)
+                && _selectedServer != null;
             return returnValue;
         }
 
@@ -77,7 +78,8 @@ namespace HCAVel.ViewModels
         {
             LoginCommand = new DelegateCommand(ExecuteLogin, CanExecuteLogin)
                 .ObservesProperty(() => UserName)
-                .ObservesProperty(() => Password);
+                .ObservesProperty(() => Password)
+                .ObservesProperty(() => SelectedServer);
         }
         #endregion
     }

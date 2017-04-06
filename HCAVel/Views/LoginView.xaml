@@ -44,7 +44,8 @@
                 Grid.Column="1"
                 Margin="0"
                 VerticalAlignment="Center"
-                Text="{Binding UserName, UpdateSourceTrigger=PropertyChanged}"
+                AcceptsReturn="False"
+                Text="{Binding UserName, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
                 Watermark="Required" />
             <TextBlock
                 Grid.Row="1"
@@ -57,7 +58,8 @@
                 x:Name="txtPassword"
                 Grid.Row="1"
                 Grid.Column="1"
-                Text="{Binding Password, UpdateSourceTrigger=PropertyChanged}"
+                AcceptsReturn="True"
+                Text="{Binding Password, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
                 Watermark="Required" />
             <TextBlock
                 Grid.Row="2"
@@ -69,8 +71,9 @@
                 x:Name="cboServer"
                 Grid.Row="2"
                 Grid.Column="1"
+                DisplayMemberPath="ServerName"
                 ItemsSource="{Binding Servers}"
-                SelectedItem="{Binding _selectedServer, UpdateSourceTrigger=PropertyChanged}"
+                SelectedItem="{Binding SelectedServer, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
                 Watermark="Select" />
         </Grid>
 
