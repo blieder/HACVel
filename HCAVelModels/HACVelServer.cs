@@ -17,7 +17,7 @@ namespace HCAVelModels
                 {
                     new HACVelServer
                     {
-                        ServerName = "Test",
+                        ServerName = "Beta",
                         ConnectString = "Test Connect String"
                     },
                     new HACVelServer

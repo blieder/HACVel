@@ -2,8 +2,7 @@
     x:Class="HCAVel.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="clr-namespace:HCAVel"
-    StartupUri="Views/LoginView.xaml">
+    xmlns:local="clr-namespace:HCAVel">
     <Application.Resources>
         <ResourceDictionary Source="HCAVelDictionary.xaml" />
     </Application.Resources>
